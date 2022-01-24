@@ -11,3 +11,4 @@ let btn = document.querySelector('.fa-eye')
                 inputSenha.setAttribute('type','password')
                 }
     })
+    
