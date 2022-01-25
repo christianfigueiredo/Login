@@ -70,13 +70,13 @@ confirmSenha.addEventListener('keyup' , () => {
     if(confirmSenha.value != senha.value){
         labelConfirmSenha.setAttribute('style','color:red')
         labelConfirmSenha.innerHTML = 'Senha diferenta da digitada'
-        nome.setAttribute('style','border-color: red')
+        confirmSenha.setAttribute('style','border-color: red')
         validConfirmSenha = false
     }
     else{
         labelConfirmSenha.setAttribute('style','color: #272262') 
         labelConfirmSenha.innerHTML = 'Confirmar Senha'     
-        nome.setAttribute('style', 'border-color: #272262')
+        confirmSenha.setAttribute('style', 'border-color: #272262')
         validConfirmSenha = true
 
     }
