@@ -39,12 +39,27 @@ let btn = document.querySelector('.fa-eye')
         })
 
         if(usuario.value == userValid.usuario && senha.value==userValid.senha){
-            alert('deu certo')
+            window.location.href='./inicio.html'
+
+            let token = Math.random().toString(16).substring(2)+Math.random().toString(16).substring(2)
+            localStorage.setItem('token',token)
+            localStorage.setItem('userLogado', JSON.stringify(userValid))
+
+
         }
         else{
-            alert('Deu ruim')
+            userLabel.setAttribute('style','color:red')
+            usuario.setAttribute('style','border-color:red')
+            senhaLabel.setAttribute('style','color:red')
+            senha.setAttribute('style','border-color:red')
+            msgError.setAttribute('style', 'display:block')
+            msgError.innerHTML = 'Usuario ou senha incorretos'
+            //usuario.value=''
+            //senha.value=''
+            usuario.focus()
         }
-
-        
-      
-   } 
+  } 
+  
+  
+  
+  
